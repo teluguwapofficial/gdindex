@@ -1601,6 +1601,23 @@ function file_audio(name, encoded_name, size, url, file_id, cookie_folder_id) {
               <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="sr-only"></span>
               </button>
+              <div class="dropdown-menu">
+              <a class="dropdown-item" href="iina://weblink?url=${url}">IINA</a>
+              <a class="dropdown-item" href="potplayer://${url}">PotPlayer</a>
+              <a class="dropdown-item" href="vlc://${url}">VLC Mobile</a>
+              <a class="dropdown-item" href="${url}">VLC Desktop</a>
+              <a class="dropdown-item" href="nplayer-${url}">nPlayer</a>
+              <a class="dropdown-item" href="intent://${url}#Intent;type=audio/any;package=is.xyz.mpv;scheme=https;end;">mpv-android</a>
+              <a class="dropdown-item" href="mpv://${url_base64}">mpv x64</a>
+              <a class="dropdown-item" href="intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${encoded_name};end">MX Player (Free)</a>
+              <a class="dropdown-item" href="intent:${url}#Intent;package=com.mxtech.videoplayer.pro;S.title=${encoded_name};end">MX Player (Pro)</a>
+              <a class="dropdown-item" href="intent:${url}#Intent;component=idm.internet.download.manager/idm.internet.download.manager.Downloader;S.title=${encoded_name};end">1DM (Free)</a>
+              <a class="dropdown-item" href="intent:${url}#Intent;component=idm.internet.download.manager.adm.lite/idm.internet.download.manager.Downloader;S.title=${encoded_name};end">1DM (Lite)</a>
+              <a class="dropdown-item" href="intent:${url}#Intent;component=idm.internet.download.manager.plus/idm.internet.download.manager.Downloader;S.title=${encoded_name};end">1DM+ (Plus)</a>
+              </div>
+          </div>
+          `+copyButton+copyFileBox+`
+          <br>
           </div>
           </div>
           `}
